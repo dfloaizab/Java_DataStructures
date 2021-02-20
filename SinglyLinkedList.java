@@ -1,29 +1,54 @@
 /**
- * A Singly Linked List implementation in java
+ * A Singly Linked List (Dynamic) implementation in java
  * Diego Loaiza 2021
  */
-public class SinglyLinkedList {
+public class SinglyLinkedList<T> {
 
     //attributes
     private ListNode head;
     private ListNode tail;
+    private int size;
 
-    // methods
+    public static void main(String args[])
+    {
+        //create the list
+        SinglyLinkedList myFirstList = new SinglyLinkedList();
 
+        //add some nodes...
+        myFirstList.appendNode(new ListNode("Diego "));
+        System.out.println("nodo agregado al final");
+        myFirstList.appendNode(new ListNode("Loaiza "));
+        System.out.println("nodo agregado al final");
+        myFirstList.appendNode(new ListNode("Buitrago "));
+        System.out.println("nodo agregado al final");
+        myFirstList.addFirst(new ListNode("Don "));
+        System.out.println("nodo agregado al inicio");
+        myFirstList.printList();
+        System.out.println("\n");
+        try {
+            myFirstList.insertNode(new ListNode("Fernando"), 1);
+        }catch(Exception e){}
+
+        //print the list
+        myFirstList.printList();
+
+    }
+
+    // METHODS , OPERATIONS
+    /**
+     * 1. create an empty list
+     */
     public SinglyLinkedList() {
         head = null;
         tail = null;
+        size = 0;
     }
 
-    public SinglyLinkedList(ListNode head, ListNode tail) {
-        this.head = head;
-        this.tail = tail;
-    }
 
     // operations on the list
 
     /**
-     *
+     * determine - whether (si) / if (si) -  list is empty or not
      * @return true if the list is empty, false otherwise
      */
     boolean isEmpty()
@@ -32,15 +57,44 @@ public class SinglyLinkedList {
     }
 
     /**
-     * insert a node at the end of the list
+     * add a node at the end of the list
      * @param nodeToInsert
      */
     void appendNode(ListNode nodeToInsert)
     {
         if(isEmpty()) {
+            //
             head = nodeToInsert;
-        } else tail.setNext(nodeToInsert);
-        tail = nodeToInsert;
+            tail = nodeToInsert;
+        }
+        else {
+             //¿?
+             tail.setNext(nodeToInsert);
+             tail = nodeToInsert;
+        }
+        size++;
+    }
+
+    /**
+     * add node at the beginning of the list
+     * @param newNode
+     */
+    void addFirst(ListNode newNode)
+    {
+        //list is empty:
+        if(isEmpty())
+        {
+            //head and tail of the list reference the new node:
+            head = newNode;
+            tail = newNode;
+        }
+        //list is not empty, update reference of the head node of the list
+        else
+        {
+            newNode.setNext(head); //"next" reference of the "newNode" is the head node of the list
+            head = newNode; //head now points (references) the newNode
+        }
+        size++;
     }
 
     /**
@@ -61,7 +115,7 @@ public class SinglyLinkedList {
             //list is not empty, position is invalid ( < 0, or > num. of nodes  ):
             if(pos < 0 || pos > size-1)
             {
-               throw new Exception("index out of bounds");
+                throw new Exception("index out of bounds");
             }
             //list is not empty, position is valid:
             else {
@@ -77,14 +131,13 @@ public class SinglyLinkedList {
                     currentPos++;
                 }
                 //update references of new node:
-                newNode.setNext(currentNode.getNext()); //A
-                currentNode.setNext(newNode); //B
+                newNode.setNext(currentNode.getNext());
+                currentNode.setNext(newNode); 
             }
 
         }
 
     }
-
 
 
     /**
