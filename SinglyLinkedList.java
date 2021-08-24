@@ -62,17 +62,7 @@ public class SinglyLinkedList<T> {
      */
     void appendNode(ListNode nodeToInsert)
     {
-        if(isEmpty()) {
-            //
-            head = nodeToInsert;
-            tail = nodeToInsert;
-        }
-        else {
-             //¿?
-             tail.setNext(nodeToInsert);
-             tail = nodeToInsert;
-        }
-        size++;
+       
     }
 
     /**
@@ -81,20 +71,7 @@ public class SinglyLinkedList<T> {
      */
     void addFirst(ListNode newNode)
     {
-        //list is empty:
-        if(isEmpty())
-        {
-            //head and tail of the list reference the new node:
-            head = newNode;
-            tail = newNode;
-        }
-        //list is not empty, update reference of the head node of the list
-        else
-        {
-            newNode.setNext(head); //"next" reference of the "newNode" is the head node of the list
-            head = newNode; //head now points (references) the newNode
-        }
-        size++;
+       
     }
 
     /**
@@ -104,38 +81,7 @@ public class SinglyLinkedList<T> {
      */
     void insertNode(  ListNode newNode, int pos  ) throws Exception
     {
-        //list is empty:
-        if(isEmpty())
-        {
-            head = newNode;
-            tail = newNode;
-        }
-        else
-        {
-            //list is not empty, position is invalid ( < 0, or > num. of nodes  ):
-            if(pos < 0 || pos > size-1)
-            {
-                throw new Exception("index out of bounds");
-            }
-            //list is not empty, position is valid:
-            else {
-                //find position to insert the node
-                ListNode currentNode = head;
-                int currentPos = 0;
-                //traverse list to find the position of insertion:
-                while( currentPos < pos  )
-                {
-                    //update current node position: move through the list
-                    currentNode = currentNode.getNext();
-                    //update current position
-                    currentPos++;
-                }
-                //update references of new node:
-                newNode.setNext(currentNode.getNext());
-                currentNode.setNext(newNode); 
-            }
-
-        }
+        
 
     }
 
@@ -182,6 +128,7 @@ public class SinglyLinkedList<T> {
        //
        ListNode theNode = null;
        //
+       //traverse the list to reach the position of the node to query:
        //
         return theNode;
     }
