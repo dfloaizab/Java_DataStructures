@@ -4,39 +4,20 @@
  */
 public class SinglyLinkedList<T> {
 
-    //attributes
+    /** attributes **/
+    //reference to head of the list (first node):
     private ListNode head;
+    //reference to tail of the list (last node):
     private ListNode tail;
+    //size of the list as number of elements:
     private int size;
 
-    public static void main(String args[])
-    {
-        //create the list
-        SinglyLinkedList myFirstList = new SinglyLinkedList();
 
-        //add some nodes...
-        myFirstList.appendNode(new ListNode("Diego "));
-        System.out.println("nodo agregado al final");
-        myFirstList.appendNode(new ListNode("Loaiza "));
-        System.out.println("nodo agregado al final");
-        myFirstList.appendNode(new ListNode("Buitrago "));
-        System.out.println("nodo agregado al final");
-        myFirstList.addFirst(new ListNode("Don "));
-        System.out.println("nodo agregado al inicio");
-        myFirstList.printList();
-        System.out.println("\n");
-        try {
-            myFirstList.insertNode(new ListNode("Fernando"), 1);
-        }catch(Exception e){}
 
-        //print the list
-        myFirstList.printList();
+    /** Methods: operations on the list **/
 
-    }
-
-    // METHODS , OPERATIONS
     /**
-     * 1. create an empty list
+     * Constructor method: create an empty list
      */
     public SinglyLinkedList() {
         head = null;
@@ -45,7 +26,7 @@ public class SinglyLinkedList<T> {
     }
 
 
-    // operations on the list
+    /** operations on the list **/
 
     /**
      * determine - whether (si) / if (si) -  list is empty or not
@@ -57,31 +38,24 @@ public class SinglyLinkedList<T> {
     }
 
     /**
+     * TODO: Complete Method
      * add a node at the end of the list
      * @param nodeToInsert
      */
     void appendNode(ListNode nodeToInsert)
     {
-       
+
     }
 
     /**
-     * add node at the beginning of the list
-     * @param newNode
-     */
-    void addFirst(ListNode newNode)
-    {
-       
-    }
-
-    /**
-     * Insert a node in the list at a given position
+     * TODO: Complete Method
+     * Insert node in the list at a given position
      * @param newNode node to insert
      * @param pos position of new node
      */
     void insertNode(  ListNode newNode, int pos  ) throws Exception
     {
-        
+
 
     }
 
@@ -91,8 +65,10 @@ public class SinglyLinkedList<T> {
      */
     void printList()
     {
-        //current node
+        //current node start at head of the list
         ListNode currentNode = head;
+        System.out.print("\n");
+        //traverse list
         while(  currentNode != null  )
         {
             //write content of the node
@@ -104,21 +80,43 @@ public class SinglyLinkedList<T> {
     }
 
     /**
-     * TODO
+     * return the number of nodes of the list
+     * @return
+     */
+    int getNumElements()
+    {
+        if(isEmpty())
+            return 0;
+
+        ListNode currentNode = head;
+        int count = 1;
+        while(  currentNode != tail  )
+        {
+            //update current node position
+            currentNode = currentNode.getNext();
+            count++;
+        }
+        return count;
+    }
+
+    /**
+     * TODO: Complete method
      * delete a node from the list given its position
      * @param pos
      */
     void deleteNode(int pos)
     {
-        //if list is empty, error
-        //if list is not empty, validate position
-        //if position is invalid, error
-        //if position is valid,
-        //traverse list to reach pos
-        //update references in order to isolate node at pos (previous node)
+
+
+
     }
 
-    /** TODO
+    boolean posIsValid(int pos)
+    {
+        return (pos >=0 && pos < size);
+    }
+
+    /**
      * Query a node in a given position
      * @param pos
      * @return the node
@@ -128,7 +126,6 @@ public class SinglyLinkedList<T> {
        //
        ListNode theNode = null;
        //
-       //traverse the list to reach the position of the node to query:
        //
         return theNode;
     }
