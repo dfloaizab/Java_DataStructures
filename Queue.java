@@ -1,73 +1,32 @@
-package queue_example;
+public class Queue {
 
-/**
- *
- * @author estudiante
- */
-public class Queue<T> {
-    
-    QueueNode head;
-    QueueNode tail;
-    int limit, size; //max # of elements
+    Node head;
+    Node tail;
+    int size; //MUY UTIL cuando se implementa un buffer circular
 
-    /**
-     * create a queue without limit
-     */
-    public Queue() {        
+    public Queue() {
         head = null;
         tail = null;
-        size = 0;
     }
-    
+
     /**
-     * create a queue with limit of elements
-     * @param limit 
+     * add a node to the queue
+     * (similar to append method on the list)
+     * @param newNode
      */
-    public Queue(int limit) {        
-        head = null;
-        tail = null;
-        size = 0;
-        this.limit = limit;
-    }
-    
-    private boolean isEmpty()
+    public void Enqueue(Node newNode)
     {
-        return (head == null && tail == null);
 
     }
-    
-    public void enqueue(   T data  ) throws Exception
-    {
-       
-    }
-    
+
     /**
-     * add an element to the queue
-     * @param newNode 
+     * o dispatch
+     * (similar to delete the first node of the list)
+     * @return
      */
-    public void enqueue( QueueNode newNode) throws Exception
+    public Node Dequeue()
     {
-         
+
     }
-    
-    /**
-     * dispatch element from the queue
-     * @return 
-     */
-    public QueueNode  dequeue()
-    {
-      
-    }
-    
-    public void printQueue()
-    {
-        QueueNode current = head;
-        //traverse the queue from head to tail:
-        while(current != null)
-        {
-            System.out.print(current.getData()+"<-");
-            current = current.getNext();
-        }
-    }
-    
+
 }
