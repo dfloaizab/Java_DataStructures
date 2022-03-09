@@ -43,7 +43,7 @@ public class Stack<E>
        {
           nodeToReturn = top;
           /**/
-          top.setNext(top.getNext());
+          top = top.getNext();
           size--;
           /**/
        }
