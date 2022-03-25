@@ -104,6 +104,59 @@ public class Recursion_Main {
         else
             return n* factorialRecursivo(n-1);
     }
+    
+    /**
+     * PUNTO 1: conteo de caracteres, versión recursiva
+     * @param cadena de entrada
+     * @return número de caracteres de la cadena
+     */
+    static int conteoCaracteresRecursivo(String cadena)
+    {
+        //TODO: Implementar
+    }
+
+    /**
+     * PUNTO 2: inversión de una cadena, versión recursiva
+     * @param cadenaOriginal
+     * @return cadena con sus caracteres invertidos
+     */
+    static String invertirCadenaRecursivo(String cadenaOriginal)
+    {
+        //TODO: Implementar
+    }
+
+
+    /**
+     * PUNTO3: inversión de una cadena, versión iterativa
+     * @param cadenaOrigina
+     * @return
+     */
+    static String invertirCadenaIterativo(String cadenaOriginal)
+    {
+        //TODO: Implementar
+    }
+
+    /**
+     * PUNTO 4: conteo de cuántas veces aparece un caracter c en una cadena s, versión recursiva
+     * @param C caracter
+     * @param S cadena
+     * @return número de veces que aparece el caracter C en S
+     */
+    static int conteoCaracterRecursivo(char C, String S)
+    {
+        //TODO: Implementar
+    }
+
+    /**
+     * PUNTO 5: conteo de cuántas veces aparece un caracter c en una cadena s, versión iterativa
+     * @param C caracter
+     * @param S cadena
+     * @return número de veces que aparece el caracter C en S
+     */
+    static int conteoCaracterIterativo(char C, String S)
+    {
+        //TODO: Implementar
+    }
 
 
 
