@@ -1,6 +1,9 @@
 /**
  * Some codings on recursion Vs. iteration
  * Diego Loaiza, 2022
+ * Estructuras de Datos
+ * Integrante 1:
+ * Integrante 2:
  */
 public class Recursion_Main {
 
