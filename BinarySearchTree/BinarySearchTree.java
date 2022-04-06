@@ -1,7 +1,19 @@
+import java.util.ArrayList;
 
 public class BinarySearchTree {
 
     private Node root;
+    ArrayList<Integer> keyList;
+
+    public ArrayList<Integer> getKeyList()
+    {
+        //construir la lista ordenada desde el árbol usando el
+        //recorrido apropiado:
+
+
+        //retornar la lista:
+        return keyList;
+    }
 
     public BinarySearchTree() {
         root = null;
@@ -16,10 +28,12 @@ public class BinarySearchTree {
         return root;
     }
 
+    //Inserción de un nodo:
     public void insertNode(Node newNode)
     {
         insertRecursive(newNode, root);
     }
+
     /* operaciones de la estructura de datos: */
     //¿Este método permite nodos con llave duplicada?
     public Node insertRecursive(Node nodeToInsert, Node rootNode)
