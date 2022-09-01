@@ -44,7 +44,18 @@ public class SinglyLinkedList<T> {
      */
     void appendNode(ListNode nodeToInsert)
     {
-
+        //list is empty:
+        if( isEmpty() )
+        {
+            head = newNode;
+            tail = newNode;
+        }
+        else //list is not empty:
+        {
+            tail.setNext(newNode);
+            tail = newNode;
+        }
+        size++;
     }
 
     /**
@@ -56,7 +67,33 @@ public class SinglyLinkedList<T> {
     void insertNode(  ListNode newNode, int pos  ) throws Exception
     {
 
-
+        ListNode current = head;
+        int count = 0;
+        if(pos >=0 && pos <= size)
+        {
+            if(pos == 0)
+            {
+                newNode.setNext(head);
+                head = newNode;
+                size++;
+            }
+            else
+            {
+                if(pos == size)
+                {
+                    appendNode(newNode);
+                }
+                else {
+                    while (count < pos - 1) {
+                        current = current.getNext();
+                        count++;
+                    }
+                    newNode.setNext(current.getNext());
+                    current.setNext(newNode);
+                    size++;
+                }
+            }
+        }
     }
 
 
