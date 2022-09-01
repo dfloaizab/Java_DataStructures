@@ -144,7 +144,15 @@ public class SinglyLinkedList<T> {
     void deleteNode(int pos)
     {
 
-
+        //1. recorrer la lista hasta pos - 1
+        ListNode currentNode = head;
+        int count = 0;
+        while(count < pos)
+        {
+            currentNode = currentNode.getNext();
+        }
+        //2. des-referenciar o aislar el nodo que sigue
+        currentNode.setNext(   currentNode.getNext().getNext()  );
 
     }
 
