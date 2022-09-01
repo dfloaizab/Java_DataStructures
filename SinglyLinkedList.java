@@ -29,7 +29,7 @@ public class SinglyLinkedList<T> {
     /** operations on the list **/
 
     /**
-     * determine - whether (si) / if (si) -  list is empty or not
+     * determine - if  list is empty or not
      * @return true if the list is empty, false otherwise
      */
     boolean isEmpty()
