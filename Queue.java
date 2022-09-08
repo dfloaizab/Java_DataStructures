@@ -53,7 +53,7 @@ public class Queue {
     public void printQueue()
     {
         //current node start at head of the list
-        ListNode currentNode = head;
+        Node currentNode = head;
         System.out.print("\n");
         //traverse list
         while(  currentNode != null  )
