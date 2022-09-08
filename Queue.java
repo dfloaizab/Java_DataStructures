@@ -21,7 +21,18 @@ public class Queue {
      */
     public void Enqueue(Node newNode)
     {
-
+        //list is empty:
+        if( isEmpty() )
+        {
+            head = newNode;
+            tail = newNode;
+        }
+        else //list is not empty:
+        {
+            tail.setNext(newNode);
+            tail = newNode;
+        }
+        size++;
     }
 
     /**
@@ -38,5 +49,21 @@ public class Queue {
         }
         return toReturn;
     }
+    
+    public void printQueue()
+    {
+        //current node start at head of the list
+        ListNode currentNode = head;
+        System.out.print("\n");
+        //traverse list
+        while(  currentNode != null  )
+        {
+            //write content of the node
+            System.out.print(currentNode.getData()+"->");
 
+            //update current node position
+            currentNode = currentNode.getNext();
+        }
+    }
+    
 }
