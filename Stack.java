@@ -58,6 +58,19 @@ public class Stack<E>
     {
       return(top);
     }
+    
+    /**
+     * print values of all nodes of the stack, from top to bottom
+     */
+    public void printStack()
+    {
+        Node currentNode = top;
+        while(currentNode != null)
+        {
+            System.out.println(currentNode.getValue().toString());
+            currentNode = currentNode.getNext();
+        }
+    }
 
 
 }
