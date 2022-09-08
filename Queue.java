@@ -8,6 +8,11 @@ public class Queue {
         head = null;
         tail = null;
     }
+    
+    public boolean isEmpty()
+    {
+        return(head == null || tail ==  null);
+    }
 
     /**
      * add a node to the queue
@@ -26,7 +31,12 @@ public class Queue {
      */
     public Node Dequeue()
     {
-
+        Node toReturn = head;
+        if(!isEmpty())
+        {
+            head = head.getNext();
+        }
+        return toReturn;
     }
 
 }
