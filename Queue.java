@@ -1,7 +1,7 @@
 public class Queue {
 
-    Node head;
-    Node tail;
+    QueueNode head;
+    QueueNode tail;
     int size; //MUY UTIL cuando se implementa un buffer circular
 
     public Queue() {
@@ -19,7 +19,7 @@ public class Queue {
      * (similar to append method on the list)
      * @param newNode
      */
-    public void Enqueue(Node newNode)
+    public void Enqueue(QueueNode newNode)
     {
         //list is empty:
         if( isEmpty() )
@@ -40,9 +40,9 @@ public class Queue {
      * (similar to delete the first node of the list)
      * @return
      */
-    public Node Dequeue()
+    public QueueNode Dequeue()
     {
-        Node toReturn = head;
+        QueueNode toReturn = head;
         if(!isEmpty())
         {
             head = head.getNext();
@@ -53,7 +53,7 @@ public class Queue {
     public void printQueue()
     {
         //current node start at head of the list
-        Node currentNode = head;
+        QueueNode currentNode = head;
         System.out.print("\n");
         //traverse list
         while(  currentNode != null  )
