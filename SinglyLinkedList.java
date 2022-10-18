@@ -174,6 +174,23 @@ public class SinglyLinkedList<T> {
        //
         return theNode;
     }
+    
+    public boolean findNode(int value)
+    {
+        boolean found = false;
+        if(!isEmpty())
+        {
+            ListNode currentNode = head;            
+            while(  currentNode != null  )
+            {
+                if( ((int) currentNode.getData()) == value)
+                    found = true;
+                //update current node position
+                currentNode = currentNode.getNext();                
+            }
+        }
+        return found;        
+    }
 
 
 }
