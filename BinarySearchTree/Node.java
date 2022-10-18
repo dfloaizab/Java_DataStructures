@@ -1,49 +1,50 @@
 public class Node<E> {
 
-    //key: determina el ordenamiento del árbol
+    /* fields */
+    E value;  /* value or data of the node */
     int key;
-
-    //información que va a guardar el nodo
-    E data;
-
-    //referencia a la rama izquierda
     Node left;
-
     Node right;
 
+
+    /* methods */
+
     public Node() {
-        left = null;
-        right = null;
-
-        data = null;
     }
 
-    public Node(int key, E data) {
+    public Node(E value) {
+        this.value = value;
+    }
+    
+    public Node(int key) {
         this.key = key;
-        this.data = data;
-    }
-
-    public Node getLeft() {
-        return left;
-    }
-
-    public Node getRight() {
-        return right;
-    }
-
-    public void setLeft(Node left) {
-        this.left = left;
-    }
-
-    public void setRight(Node right) {
-        this.right = right;
     }
 
     public int getKey() {
         return key;
     }
 
-    public void setKey(int key) {
-        this.key = key;
+    public void setValue(E value) {
+        this.value = value;
     }
+
+    
+    public Node getLeft()
+    {
+        return this.left;
+    }
+    
+    public Node getRight()
+    {
+        return this.right;
+    }
+
+    public void setLeft(Node newLeft) {
+        this.left = left;
+    }
+    
+       public void setRight(Node newLeft) {
+        this.right = right;
+    }
+
 }
