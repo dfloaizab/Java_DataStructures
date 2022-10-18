@@ -2,7 +2,9 @@ public class Node<E> {
 
     /* fields */
     E value;  /* value or data of the node */
-    Node next;
+    int key;
+    Node left;
+    Node right;
 
 
     /* methods */
@@ -13,21 +15,36 @@ public class Node<E> {
     public Node(E value) {
         this.value = value;
     }
+    
+    public Node(int key) {
+        this.key = key;
+    }
 
-    public E getValue() {
-        return value;
+    public int getKey() {
+        return key;
     }
 
     public void setValue(E value) {
         this.value = value;
     }
 
-    public Node getNext() {
-        return next;
+    
+    public Node getLeft()
+    {
+        return this.left;
+    }
+    
+    public Node getRight()
+    {
+        return this.right;
     }
 
-    public void setNext(Node next) {
-        this.next = next;
+    public void setLeft(Node newLeft) {
+        this.left = left;
+    }
+    
+       public void setRight(Node newLeft) {
+        this.right = right;
     }
 
 }
