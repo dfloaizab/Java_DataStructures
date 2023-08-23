@@ -42,7 +42,7 @@ public class SinglyLinkedList<T> {
      * add a node at the end of the list
      * @param nodeToInsert
      */
-    void appendNode(ListNode nodeToInsert)
+    void appendNode(ListNode newNode)
     {
         //list is empty:
         if( isEmpty() )
