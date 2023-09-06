@@ -4,7 +4,9 @@ public class Node<T> {
      T data;
      Node next;
 
-
+     public Node()
+     {
+     }
      /* métodos de un nodo */
      public Node(T data) {
           this.data = data;
