@@ -67,7 +67,7 @@ public class Stack<E>
         Node currentNode = top;
         while(currentNode != null)
         {
-            System.out.println(currentNode.getValue().toString());
+            System.out.println(currentNode.getData().toString());
             currentNode = currentNode.getNext();
         }
     }
