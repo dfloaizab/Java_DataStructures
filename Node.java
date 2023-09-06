@@ -1,12 +1,12 @@
-public class ListNode<T> {
+public class Node<T> {
 
      /* atributos de un nodo */
      T data;
-     ListNode next;
+     Node next;
 
 
      /* métodos de un nodo */
-     public ListNode(T data) {
+     public Node(T data) {
           this.data = data;
      }
 
@@ -20,11 +20,11 @@ public class ListNode<T> {
           this.data = data;
      }
 
-     public ListNode getNext() {
+     public Node getNext() {
           return next;
      }
 
-     public void setNext(ListNode next) {
+     public void setNext(Node next) {
           this.next = next;
      }
 }
