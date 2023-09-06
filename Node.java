@@ -7,6 +7,7 @@ public class Node<T> {
      public Node()
      {
      }
+     
      /* métodos de un nodo */
      public Node(T data) {
           this.data = data;
