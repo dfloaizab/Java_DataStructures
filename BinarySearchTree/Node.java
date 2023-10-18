@@ -24,6 +24,11 @@ public class Node<E> {
         return key;
     }
 
+    public void setKey(int newKey)
+    {
+        return key;
+    }
+
     public void setValue(E value) {
         this.value = value;
     }
