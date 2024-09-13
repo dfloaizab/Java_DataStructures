@@ -4,6 +4,9 @@ public class SinglyLinkedList_Test {
     {
         //create the list
         SinglyLinkedList myFirstList = new SinglyLinkedList();
+        SinglyLinkedList Department = new SinglyLinkedList();
+
+        Department.appendNode(new ListNode(new Office("Pance")));
 
         //add some nodes...
         myFirstList.appendNode(new ListNode("Diego "));
