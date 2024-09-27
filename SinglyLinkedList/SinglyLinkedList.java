@@ -10,7 +10,7 @@ public class SinglyLinkedList<T> {
     //reference to tail of the list (last node):
     private ListNode tail;
     //size of the list as number of elements:
-    private int size;
+    private int size, max_size;
 
 
 
@@ -25,6 +25,11 @@ public class SinglyLinkedList<T> {
         size = 0;
     }
 
+    public SinglyLinkedList(int maxSize) {
+        head = null;
+        tail = null;
+        this.maxSize = maxSize;
+    }
 
     /** operations on the list **/
 
@@ -51,9 +56,12 @@ public class SinglyLinkedList<T> {
             tail = newNode;
         }
         else //list is not empty:
+            //PENDIENTE: Validar que al agregar el nuevo nodo, no se supere el tamaño.
         {
             tail.setNext(newNode);
             tail = newNode;
+            //referencia al primer nodo para construir una lista circular:
+            tail.setNext(head);
         }
         size++;
     }
