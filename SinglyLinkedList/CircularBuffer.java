@@ -19,13 +19,13 @@ public class CircularBuffer<T> {
     /**
      * Constructor method: create an empty list
      */
-    public SinglyLinkedList() {
+    public CircularBuffer() {
         head = null;
         tail = null;
         size = 0;
     }
 
-    public SinglyLinkedList(int maxSize) {
+    public CircularBuffer(int maxSize) {
         head = null;
         tail = null;
         this.maxSize = maxSize;
