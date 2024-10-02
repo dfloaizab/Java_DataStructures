@@ -216,19 +216,25 @@ public class Company {
     }
 
     public List<Employee> preOrder(Employee currentRoot){
-        List<Employee> employees = new ArrayList<Employee>();
-            
-        
-        if(currentRoot == null)
+        List<Employee> employeesList = new ArrayList<Employee>();
+        preOrder_rec(root,employeesList);
+        return employeesList;
+    }
+
+    public void preOrder_rec(Employee root, List<> employeesList)
+    {
+        if(root = null)
         {
-            return currentRoot;
+            return;
         }
-        else{
-            employees.add(currentRoot);
-            employees.add(preOrder(currentRoot.getLeft()));
-            employees.add(preOrder(currentRoot.getRight()));
+        else
+        {
+            employeesList.add(root);
+            preOrder_rec(root.getLeft(), employeesList);
+            preOrder_rec(root.getRight(), employeesList);
         }
     }
+    
     public List<Employee> inOrder(){
         return null;
     }
