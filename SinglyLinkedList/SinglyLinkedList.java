@@ -58,14 +58,8 @@ public class SinglyLinkedList<T> {
         else //list is not empty:
             //PENDIENTE: Validar que al agregar el nuevo nodo, no se supere el tamaño.
         {
-            //para que funcione como un buffer circular, debo mover la referencia del head:
-            head = head.getNext();
-            //
             tail.setNext(newNode);
-            tail = newNode;
-            //referencia al primer nodo para construir una lista circular:
-            tail.setNext(head);
-            
+            tail = newNode;            
         }
         size++;
     }
