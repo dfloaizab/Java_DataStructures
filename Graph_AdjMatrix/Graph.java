@@ -44,7 +44,7 @@ public class Graph {
      */
     public void add_edge(int vertex_start, int vertex_end, int weight)
     {
-        adj_matrix[ vertex_start - 1 ] [ vertex_end -1 ] = weight;
+        
     }
 
     /**
