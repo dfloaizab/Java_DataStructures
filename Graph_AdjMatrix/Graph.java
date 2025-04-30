@@ -47,50 +47,7 @@ public class Graph {
         
     }
 
-    /**
-     * how many edges _____ from vertex_index
-     * @param vertex_index
-     * @return
-     */
-    public int out_deg(int vertex_index)
-    {
-        int degree=0;
-        /* traverse row */
-       for(int i = 0; i < num_vertices; i++)
-       {
-           if(adj_matrix[vertex_index-1][i] > 0)
-             degree++;
-       }
-       return degree;
-    }
-
-    /**
-     * how many edges _____ to vertex_index
-     * @param vertex_index
-     * @return
-     */
-    public int in_deg(int vertex_index)
-    {
-        int degree=0;
-        /* traverse column:*/
-        for(int i = 0; i < num_vertices; i++)
-        {
-            if(adj_matrix[i][vertex_index-1] > 0)
-                degree++;
-        }
-        return degree;
-    }
-
-    /**
-     *
-     * @param vertex_index
-     * @return
-     */
-    public int total_degree(int vertex_index)
-    {
-       return (in_deg(vertex_index) + out_deg(vertex_index));
-    }
-
+   
 
     /**
      * 
