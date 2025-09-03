@@ -114,7 +114,7 @@ public class SinglyLinkedList<T> {
         while(  currentNode != null  )
         {
             //write content of the node
-            System.out.print(currentNode.getData()+"->");
+            System.out.print(currentNode.getData().toString() +"->");
 
             //update current node position
             currentNode = currentNode.getNext();
