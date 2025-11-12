@@ -63,14 +63,7 @@ public class Graph {
     
     public ArrayList<Integer> adjacentNodes(int node)
     {
-        ArrayList<Integer> adjNodes = new ArrayList<>();
-
-        for(int i = 0; i < num_nodes; i++)
-        {
-            if(adj_matrix[node][i] != 0)
-                adjNodes.add(i);
-        }
-        return adjNodes;
+        
     }
     
     
@@ -82,21 +75,7 @@ public class Graph {
     static void DFS(int start, boolean[] visited)
     {
 
-        // Print the current node
-        System.out.print(start + " ");
-
-        // Set current node as visited
-        visited[start] = true;
-
-        // For every node of the graph
-        for (int i = 0; i < adjacentNodes(start).size() ; i++) {
-
-            // If some node is adjacent to the current node
-            // and it has not already been visited
-            if (adjacentNodes(start).get(i) == 1 && (!visited[i])) {
-                DFS(i, visited);
-            }
-        }
+        
     }
 
     /**
@@ -114,3 +93,4 @@ public class Graph {
 
 
 }
+
