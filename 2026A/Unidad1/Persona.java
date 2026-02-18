@@ -3,6 +3,8 @@ public class Persona implements Comparable<Persona> {
 
     private String nombre;
     private int edad;
+    private float salarioBase;
+    
 
     public Persona(String nombre, int edad) {
         this.nombre = nombre;
