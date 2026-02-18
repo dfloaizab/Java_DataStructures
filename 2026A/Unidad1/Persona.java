@@ -19,7 +19,7 @@ public class Persona implements Comparable<Persona> {
 
      @Override
     public int compareTo(Persona otra) {
-        return Float.compareTo(this.edad, otra.edad);
+        return Float.compareTo(this.salarioBase, otra.salarioBase);
     }
     
 }
