@@ -11,10 +11,17 @@ public class Persona implements Comparable<Persona> {
         this.edad = edad;
     }
 
+    /*
     @Override
     public int compareTo(Persona otra) {
         return Integer.compare(this.edad, otra.edad);
+    }*/
+
+     @Override
+    public int compareTo(Persona otra) {
+        return Float.compareTo(this.edad, otra.edad);
     }
+    
 }
 
 
