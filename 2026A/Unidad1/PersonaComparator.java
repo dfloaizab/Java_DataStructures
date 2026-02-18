@@ -9,10 +9,11 @@ public class PersonaComparator {
     private LocalDate fechaNacimiento;
     private float Salario;
 
-    public PersonaComparator(String nombre, int edad, LocalDate fechaNacimiento) {
+    public PersonaComparator(String nombre, int edad, LocalDate fechaNacimiento, float Salario) {
         this.nombre = nombre;
         this.edad = edad;
         this.fechaNacimiento = fechaNacimiento;
+        this.salario = Salario;
     }
 
     public String getNombre() {
@@ -40,9 +41,9 @@ public class PersonaComparator {
     public static void main(String[] args) {
 
         PersonaComparator[] personas = {
-            new PersonaComparator("Ana", 28, LocalDate.of(1996, 3, 15)),
-            new PersonaComparator("Carlos", 35, LocalDate.of(1989, 7, 20)),
-            new PersonaComparator("Beatriz", 22, LocalDate.of(2002, 1, 10))
+            new PersonaComparator("Ana", 28, LocalDate.of(1996, 3, 15),1500000.0f),
+            new PersonaComparator("Carlos", 35, LocalDate.of(1989, 7, 20),1800000.0f),
+            new PersonaComparator("Beatriz", 22, LocalDate.of(2002, 1, 10),2500000.0f)
         };
 
         // 🔹 Comparator por nombre
