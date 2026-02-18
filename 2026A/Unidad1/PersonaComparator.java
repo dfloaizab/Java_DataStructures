@@ -82,6 +82,18 @@ public class PersonaComparator {
         Comparator<PersonaComparator> porSalario =
             (p1,p2) -> p1.getSalario().compareTo(p2.getSalario());
 
+        //vamos a comparar si la persona en la posición 1 del arreglo, tiene un salario  mayor al de la persona en la posición 2:
+        if(porSalario.compare( personas[1], pesonas[2])  >   0)
+        {
+            //
+        }
+
+        //cómo usar un comparator en un algoritmo?:
+        //Comparator tiene el método compare:
+        //porSalario.compare(persona1, persona2) > 0   : el salario de persona1 es mayor que el de persona 2
+        //porSalario.compare(persona1, persona2) == 0 : los salarios son iguales
+        //porSalario.compare(persona1, persona2) < 0 : el salario de persona1 es menor que el de persona 2
+
         System.out.println("\nOrdenadas por fecha de nacimiento:");
         for (PersonaComparator p : personas) {
             System.out.println(p);
