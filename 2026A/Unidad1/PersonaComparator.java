@@ -7,6 +7,7 @@ public class PersonaComparator {
     private String nombre;
     private int edad;
     private LocalDate fechaNacimiento;
+    private float Salario;
 
     public PersonaComparator(String nombre, int edad, LocalDate fechaNacimiento) {
         this.nombre = nombre;
@@ -20,6 +21,11 @@ public class PersonaComparator {
 
     public int getEdad() {
         return edad;
+    }
+
+    public float getSalario()
+    {    
+        return salario;
     }
 
     public LocalDate getFechaNacimiento() {
@@ -66,6 +72,14 @@ public class PersonaComparator {
                 (p1, p2) -> p1.getFechaNacimiento().compareTo(p2.getFechaNacimiento());
 
         Arrays.sort(personas, porFecha);
+
+        //este comparador permite comparar por el atributo "Salario":
+        //el compareTo funciona así:
+        // si el atributo de p1 es > atributo p2, retorna 1
+        // si son iguales, retorna 0
+        // si el atributo de p1 es menor, retorna -1
+        Comparator<PersonaComparator> porSalario =
+            (p1,p2) -> p1.getSalario().compareTo(p2.getSalario());
 
         System.out.println("\nOrdenadas por fecha de nacimiento:");
         for (PersonaComparator p : personas) {
