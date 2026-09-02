@@ -33,6 +33,9 @@ public class TestComparacion {
         //c. qué se debe cambiar para que ordene por modelo?
 
         //d. qué método usar el sort de Collections?
+
+        //e. Ya se ordena el arreglo de vehículos, Agregar atributo matricula, ¿cómo encontramos un vehículo por matrícula en el arreglo ya ordenado
+        //    usando búsqueda binaria?
         
     }
     
