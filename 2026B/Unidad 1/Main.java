@@ -4,7 +4,7 @@ public class Main {
 
         System.out.println("¿Está vacía al crear? " + inventario.estaVacia());
 
-        // Agregar elementos
+        // Agregar elementos al final. complejidad O(1)
         inventario.append(new Producto("Arroz", "kg", 50));
         inventario.append(new Producto("Aceite", "L", 20));
         inventario.agregarAlInicio(new Producto("Sal", "kg", 15));
@@ -13,12 +13,12 @@ public class Main {
         inventario.recorrer();
         System.out.println("Tamaño: " + inventario.tamanio());
 
-        // Ubicar por posición
+        // Ubicar por posición. Complejidad O(n)
         System.out.println("\nElemento en posición 1: " + inventario.obtenerEnPosicion(1));
         System.out.println("Primero: " + inventario.primero());
         System.out.println("Último: " + inventario.ultimo());
 
-        // Buscar por valor (equals de Producto compara por nombre)
+        // Buscar por valor (equals de Producto compara por nombre). Complejidad O(n)
         boolean existeAceite = inventario.buscar(new Producto("Aceite", "", 0));
         boolean existePanela = inventario.buscar(new Producto("Panela", "", 0));
         System.out.println("\n¿Existe 'Aceite'? " + existeAceite);
